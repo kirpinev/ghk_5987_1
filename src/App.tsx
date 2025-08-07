@@ -254,7 +254,7 @@ export const App = () => {
                 </div>
                 <Gap size={16} />
                 {type && type !== "travel" && (
-                  <div style={{ textAlign: "center" }}>
+                  <div style={{ textAlign: "center", marginTop: "auto" }}>
                     <div
                       onClick={() => {
                         setType("travel");
@@ -265,6 +265,7 @@ export const App = () => {
                         borderRadius: "24px",
                         backgroundColor: "#F3F4F5",
                         textAlign: "center",
+                        marginTop: "auto",
                       }}
                     >
                       Заменить
@@ -309,6 +310,7 @@ export const App = () => {
                 )}
                 {!type && (
                   <ButtonMobile
+                    style={{ marginTop: "auto" }}
                     size="xl"
                     hint="Добавить к подписке"
                     onClick={() => {
@@ -427,7 +429,7 @@ export const App = () => {
                 </div>
                 <Gap size={16} />
                 {type && type !== "city" && (
-                  <div style={{ textAlign: "center" }}>
+                  <div style={{ textAlign: "center", marginTop: "auto" }}>
                     <div
                       onClick={() => {
                         setType("city");
@@ -482,6 +484,7 @@ export const App = () => {
                 )}
                 {!type && (
                   <ButtonMobile
+                    style={{ marginTop: "auto" }}
                     size="xl"
                     hint="Добавить к подписке"
                     onClick={() => {
@@ -600,7 +603,7 @@ export const App = () => {
                 </div>
                 <Gap size={16} />
                 {type && type !== "zozh" && (
-                  <div style={{ textAlign: "center" }}>
+                  <div style={{ textAlign: "center", marginTop: "auto" }}>
                     <div
                       onClick={() => {
                         setType("zozh");
@@ -655,6 +658,7 @@ export const App = () => {
                 )}
                 {!type && (
                   <ButtonMobile
+                    style={{ marginTop: "auto" }}
                     size="xl"
                     hint="Добавить к подписке"
                     onClick={() => {
@@ -755,27 +759,10 @@ export const App = () => {
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      height: "48px",
-                    }}
-                  >
-                    <Typography.Text
-                      tag="p"
-                      view="primary-medium"
-                      defaultMargins={false}
-                    >
-                      Ранний доступ к скидкам на билеты
-                    </Typography.Text>
-                    <img src={check} height="24" width="24" alt="" />
-                  </div>
                 </div>
                 <Gap size={16} />
                 {type && type !== "food" && (
-                  <div style={{ textAlign: "center" }}>
+                  <div style={{ textAlign: "center", marginTop: "auto" }}>
                     <div
                       onClick={() => {
                         setType("food");
@@ -802,7 +789,7 @@ export const App = () => {
                   </div>
                 )}
                 {type && type === "food" && (
-                  <div style={{ textAlign: "center" }}>
+                  <div style={{ textAlign: "center", marginTop: "auto" }}>
                     <div
                       onClick={() => {
                         setType("");
@@ -830,6 +817,7 @@ export const App = () => {
                 )}
                 {!type && (
                   <ButtonMobile
+                    style={{ marginTop: "auto" }}
                     size="xl"
                     hint="Добавить к подписке"
                     onClick={() => {

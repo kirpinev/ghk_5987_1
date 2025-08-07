@@ -87,6 +87,7 @@ const slider = style({
   flexDirection: "column",
   gap: "1rem",
   border: "2px solid #F3F4F5",
+  minHeight: "465px",
 });
 
 const sliderTop1 = style({
