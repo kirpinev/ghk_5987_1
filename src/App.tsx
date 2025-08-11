@@ -144,7 +144,7 @@ export const App = () => {
           color="secondary"
           style={{ textAlign: "center" }}
         >
-          Можно выбрать раз в месяц
+          Можно выбирать раз в месяц
         </Typography.Text>
         <Gap size={16} />
         <div>
@@ -204,7 +204,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Дополнительный Путешествия-кэшбэк
+                      Дополнительный кэшбэк в Альфа-Тревел
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
@@ -285,7 +285,7 @@ export const App = () => {
                       color="secondary"
                       defaultMargins={false}
                     >
-                      Уже выбран другой набор
+                      Уже выбрали другую опцию
                     </Typography.Text>
                   </div>
                 )}
@@ -312,7 +312,7 @@ export const App = () => {
                       color="secondary"
                       defaultMargins={false}
                     >
-                      Добавлено к подписке
+                      Добавили к подписке
                     </Typography.Text>
                   </div>
                 )}
@@ -356,7 +356,7 @@ export const App = () => {
                     defaultMargins={false}
                     style={{ fontWeight: "500" }}
                   >
-                    Твой город
+                    Мой город
                   </Typography.Text>
                 </div>
                 <div
@@ -413,7 +413,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Чаевые без комиссии с сервисом НетМонет
+                      Чаевые без комиссии в сервисе нетмонет
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
@@ -459,7 +459,7 @@ export const App = () => {
                       color="secondary"
                       defaultMargins={false}
                     >
-                      Уже выбран другой набор
+                      Уже выбрали другую опцию
                     </Typography.Text>
                   </div>
                 )}
@@ -486,7 +486,7 @@ export const App = () => {
                       color="secondary"
                       defaultMargins={false}
                     >
-                      Добавлено к подписке
+                      Добавили к подписке
                     </Typography.Text>
                   </div>
                 )}
@@ -553,7 +553,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Кэшбэк на любимый вид транспорта
+                      Дополнительный кэшбэк в категории Активных отдых
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
@@ -570,7 +570,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Бесплатный кофе каждый месяц
+                      +10 баллов каждый месяц в Fitmost
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
@@ -587,7 +587,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Чаевые без комиссии с сервисом НетМонет
+                      Бесплатная доставка в категории ЗОЖ в Яндекс.Еде
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
@@ -604,7 +604,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Бери заряд — первые 30 минут в подарок
+                      Бесплатная онлайн-консультация у врача 1 раз в месяц
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
@@ -633,7 +633,7 @@ export const App = () => {
                       color="secondary"
                       defaultMargins={false}
                     >
-                      Уже выбран другой набор
+                      Уже выбрали другую опцию
                     </Typography.Text>
                   </div>
                 )}
@@ -660,7 +660,7 @@ export const App = () => {
                       color="secondary"
                       defaultMargins={false}
                     >
-                      Добавлено к подписке
+                      Добавили к подписке
                     </Typography.Text>
                   </div>
                 )}
@@ -706,7 +706,7 @@ export const App = () => {
                     defaultMargins={false}
                     style={{ fontWeight: "500" }}
                   >
-                    Вкусный
+                    Вкус жизни 🤌
                   </Typography.Text>
                 </div>
                 <div
@@ -729,7 +729,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Кэшбэк на WB в кафе и рестораны
+                      Дополнительный кэшбэк на фастфуд, кафе и рестораны
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
@@ -746,7 +746,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Чашка кофе в Пятёрочке в подарок каждый месяц
+                      Бесплатный кофе в Пятёрочке каждый месяц
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
@@ -763,7 +763,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Бесплатная доставка из Яндекс.Еды
+                      Бесплатная доставка в Яндекс.Еде
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
@@ -792,7 +792,7 @@ export const App = () => {
                       color="secondary"
                       defaultMargins={false}
                     >
-                      Уже выбран другой набор
+                      Уже выбрали другую опцию
                     </Typography.Text>
                   </div>
                 )}
@@ -819,7 +819,7 @@ export const App = () => {
                       color="secondary"
                       defaultMargins={false}
                     >
-                      Добавлено к подписке
+                      Добавили к подписке
                     </Typography.Text>
                   </div>
                 )}
