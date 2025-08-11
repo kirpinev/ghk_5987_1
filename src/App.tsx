@@ -18,6 +18,7 @@ import { Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { sendDataToGA } from "./utils/events.ts";
 
 interface Product {
   title: string;
@@ -57,14 +58,20 @@ export const App = () => {
   const [thxShow, setThx] = useState(LS.getItem(LSKeys.ShowThx, false));
   const [totalSum, setTotalSum] = useState(399);
   const [type, setType] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const submit = () => {
-    window.gtag("event", "5988_get_sub", {
-      variant_name: "5987_1",
-    });
+    setLoading(true);
 
-    LS.setItem(LSKeys.ShowThx, true);
-    setThx(true);
+    sendDataToGA({
+      preset: type ? "True" : "False",
+      preset_type: type,
+      sub_sum: String(totalSum),
+    }).then(() => {
+      setLoading(false);
+      LS.setItem(LSKeys.ShowThx, true);
+      setThx(true);
+    });
   };
 
   if (thxShow) {
@@ -157,13 +164,14 @@ export const App = () => {
               <div
                 className={appSt.slider}
                 style={{
-                  ...(type === "travel" && { backgroundColor: "#F4F5F3" }),
+                  ...(type === "Путешествия" && { backgroundColor: "#F4F5F3" }),
                 }}
               >
                 <div
                   className={appSt.sliderTop1}
                   style={{
-                    backgroundColor: type === "travel" ? "white" : "#DEF9FF",
+                    backgroundColor:
+                      type === "Путешествия" ? "white" : "#DEF9FF",
                   }}
                 >
                   <Typography.Text
@@ -196,7 +204,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Дополнительный Travel-кэшбэк
+                      Дополнительный Путешествия-кэшбэк
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
@@ -253,11 +261,11 @@ export const App = () => {
                   </div>
                 </div>
                 <Gap size={16} />
-                {type && type !== "travel" && (
+                {type && type !== "Путешествия" && (
                   <div style={{ textAlign: "center", marginTop: "auto" }}>
                     <div
                       onClick={() => {
-                        setType("travel");
+                        setType("Путешествия");
                         setTotalSum(599);
                       }}
                       style={{
@@ -281,7 +289,7 @@ export const App = () => {
                     </Typography.Text>
                   </div>
                 )}
-                {type && type === "travel" && (
+                {type && type === "Путешествия" && (
                   <div style={{ textAlign: "center" }}>
                     <div
                       onClick={() => {
@@ -315,7 +323,7 @@ export const App = () => {
                     hint="Добавить к подписке"
                     onClick={() => {
                       setTotalSum((prevState) => prevState + 200);
-                      setType("travel");
+                      setType("Путешествия");
                     }}
                   >
                     + 200 ₽ в месяц
@@ -332,7 +340,7 @@ export const App = () => {
               <div
                 className={appSt.slider}
                 style={{
-                  ...(type === "city" && { backgroundColor: "#F4F5F3" }),
+                  ...(type === "Твой город" && { backgroundColor: "#F4F5F3" }),
                 }}
               >
                 <div
@@ -428,11 +436,11 @@ export const App = () => {
                   </div>
                 </div>
                 <Gap size={16} />
-                {type && type !== "city" && (
+                {type && type !== "Твой город" && (
                   <div style={{ textAlign: "center", marginTop: "auto" }}>
                     <div
                       onClick={() => {
-                        setType("city");
+                        setType("Твой город");
                         setTotalSum(599);
                       }}
                       style={{
@@ -455,7 +463,7 @@ export const App = () => {
                     </Typography.Text>
                   </div>
                 )}
-                {type && type === "city" && (
+                {type && type === "Твой город" && (
                   <div style={{ textAlign: "center" }}>
                     <div
                       onClick={() => {
@@ -489,7 +497,7 @@ export const App = () => {
                     hint="Добавить к подписке"
                     onClick={() => {
                       setTotalSum((prevState) => prevState + 200);
-                      setType("city");
+                      setType("Твой город");
                     }}
                   >
                     + 200 ₽ в месяц
@@ -506,7 +514,7 @@ export const App = () => {
               <div
                 className={appSt.slider}
                 style={{
-                  ...(type === "zozh" && { backgroundColor: "#F4F5F3" }),
+                  ...(type === "ЗОЖ" && { backgroundColor: "#F4F5F3" }),
                 }}
               >
                 <div
@@ -602,11 +610,11 @@ export const App = () => {
                   </div>
                 </div>
                 <Gap size={16} />
-                {type && type !== "zozh" && (
+                {type && type !== "ЗОЖ" && (
                   <div style={{ textAlign: "center", marginTop: "auto" }}>
                     <div
                       onClick={() => {
-                        setType("zozh");
+                        setType("ЗОЖ");
                         setTotalSum(599);
                       }}
                       style={{
@@ -629,7 +637,7 @@ export const App = () => {
                     </Typography.Text>
                   </div>
                 )}
-                {type && type === "zozh" && (
+                {type && type === "ЗОЖ" && (
                   <div style={{ textAlign: "center" }}>
                     <div
                       onClick={() => {
@@ -663,7 +671,7 @@ export const App = () => {
                     hint="Добавить к подписке"
                     onClick={() => {
                       setTotalSum((prevState) => prevState + 200);
-                      setType("zozh");
+                      setType("ЗОЖ");
                     }}
                   >
                     + 200 ₽ в месяц
@@ -681,7 +689,7 @@ export const App = () => {
               <div
                 className={appSt.slider}
                 style={{
-                  ...(type === "food" && { backgroundColor: "#F4F5F3" }),
+                  ...(type === "Вкусный" && { backgroundColor: "#F4F5F3" }),
                   marginRight: "16px",
                 }}
               >
@@ -761,11 +769,11 @@ export const App = () => {
                   </div>
                 </div>
                 <Gap size={16} />
-                {type && type !== "food" && (
+                {type && type !== "Вкусный" && (
                   <div style={{ textAlign: "center", marginTop: "auto" }}>
                     <div
                       onClick={() => {
-                        setType("food");
+                        setType("Вкусный");
                         setTotalSum(599);
                       }}
                       style={{
@@ -788,7 +796,7 @@ export const App = () => {
                     </Typography.Text>
                   </div>
                 )}
-                {type && type === "food" && (
+                {type && type === "Вкусный" && (
                   <div style={{ textAlign: "center", marginTop: "auto" }}>
                     <div
                       onClick={() => {
@@ -822,7 +830,7 @@ export const App = () => {
                     hint="Добавить к подписке"
                     onClick={() => {
                       setTotalSum((prevState) => prevState + 200);
-                      setType("food");
+                      setType("Вкусный");
                     }}
                   >
                     + 200 ₽ в месяц
@@ -838,6 +846,7 @@ export const App = () => {
 
       <div className={appSt.bottomBtn}>
         <ButtonMobile
+          loading={loading}
           block
           view="primary"
           href=""

@@ -7,7 +7,7 @@ import { Gap } from "@alfalab/core-components/gap";
 
 export const ThxLayout = () => {
   const submit = () => {
-    window.gtag("event", "5988_get_real_sub", {
+    window.gtag("event", "5987_get_real_sub", {
       variant_name: "5987_1",
     });
   };
