@@ -604,7 +604,7 @@ export const App = () => {
                       view="primary-medium"
                       defaultMargins={false}
                     >
-                      Бесплатная онлайн-консультация у врача 1 раз в месяц
+                      Онлайн-консультация у врача 1 раз в месяц
                     </Typography.Text>
                     <img src={check} height="24" width="24" alt="" />
                   </div>
